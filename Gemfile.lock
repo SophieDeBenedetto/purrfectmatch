@@ -100,6 +100,7 @@ GEM
     petfinder (1.0.2)
       excon (~> 0.26)
       nokogiri (~> 1.6)
+    pg (0.18.1)
     pry (0.10.1)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -196,6 +197,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   petfinder
+  pg
   pry
   rails (= 4.2.0)
   rails-erd
