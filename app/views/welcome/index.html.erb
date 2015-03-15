@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-lg-8">
 <form class="form-horizontal">
-<%= form_tag :controller => 'pets', :action => 'search', :method => 'get' do %>
+<%= form_tag :controller => 'pets', :action => 'search', :method => 'post' do %>
  <%= label_tag('pets[zip_code]', "Zipcode") %>
  <%= text_field_tag('pets[zip_code]') %>
  <%= label_tag('pets[species]', "Type") %>

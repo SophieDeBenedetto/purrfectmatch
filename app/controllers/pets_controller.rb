@@ -9,6 +9,7 @@ class PetsController < ApplicationController
 
 
   def search
+    binding.pry
     @pets = Pet.where(clean_params)
     render :results
   end
