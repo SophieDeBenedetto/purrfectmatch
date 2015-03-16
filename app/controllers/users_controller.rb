@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
   before_action :login_required, :my_pets
-  
+
   def index
   end
 

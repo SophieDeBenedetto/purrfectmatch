@@ -1,14 +1,17 @@
 class PetsController < ApplicationController
 
-  # PETFINDER = Petfinder::Client.new('bf43919be64d0ffed94aa9fa2acfd9d0', '11f2621e8fac20123e25a1807f0e61fe')
-
   def index #index page will render search form
     @pet = Pet.new
     #send form data in params to create
   end
 
+  def show
+    @pet = Pet.find(params[:id])
+  end
+
 
   def search
+    # binding.pry
     @pets = Pet.where(clean_params)
     render :results
   end

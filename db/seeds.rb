@@ -22,10 +22,10 @@ PETFINDER.find_pets(SPECIES.sample, ZIPCODES.sample, count: 50).each do |pf|
     pet.breeds << Breed.find_or_create_by(name: breed)
   end
   pf.photos.each do |photo|
-    if !photo.medium.empty?
+    if !photo.medium.empty? || !photo.medium.nil?
       pet.picture = photo.medium
     else
-      pet.picture = '../app/assets/images/default_pet.jpg'
+      pet.picture = '/Users/cyrusghazanfar/Desktop/trial/app/assets/images/default_pet.jpg'
     end
   end
   pf_shelter = PETFINDER.shelter(pf.shelter_id)
