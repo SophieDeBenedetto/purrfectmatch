@@ -1,16 +1,28 @@
-<%= form_tag pets_search_path, :method => 'get', :class => "form-horizontal" do %>
- <%= label_tag('pets[zip_code]', "Zipcode") %>
- <%= text_field_tag('pets[zip_code]') %>
- <%= label_tag('pets[species]', "Type") %>
- <%= select_tag('pets[species]', options_for_select([["Dog","Dog"],["Cat","Cat"],["Rabbit", "Rabbit"], ["Small & Furry","Small & Furry"],["Horse", "Horse"],["Pig", "Pig"],["Reptile", "Reptile"],["Bird", "Bird"],["Barnyard", "Barnyard"]])) %>
+<%= form_tag pets_search_path, :method => 'get', :class => "form-inline" do %>
+<div class="form-group">
+	 <%= label_tag('pets[zip_code]', "Zipcode") %>
+	 <%= text_field_tag('pets[zip_code]', class: "form-control") %>
+</div>
+<div class="form-group">
+	 <%= label_tag('pets[species]', "Type") %>
+	 <%= select_tag('pets[species]', options_for_select([["Dog","Dog"],["Cat","Cat"],["Rabbit", "Rabbit"], ["Small & Furry","Small & Furry"],["Horse", "Horse"],["Pig", "Pig"],["Reptile", "Reptile"],["Bird", "Bird"],["Barnyard", "Barnyard"]]), class: "form-control") %>
+</div>
+<div class="form-group">
   <%= label_tag('pets[breed]', "Breed") %>
-  <%= text_field_tag('pets[breed]', nil, class: 'typeahead') %>
+  <%= text_field_tag('pets[breed]', nil, class: 'typeahead form-control') %>
+</div>
+<div class="form-group">
   <%= label_tag('pets[age]', "Age") %>
-  <%= select_tag('pets[age]', options_for_select([["None",""],["Baby","Baby"],["Young","Young"],["Adult", "Adult"], ["Senior","Senior"]])) %>
+  <%= select_tag('pets[age]', options_for_select([["None",""],["Baby","Baby"],["Young","Young"],["Adult", "Adult"], ["Senior","Senior"]]), class: "form-control") %>
+</div>
+<div class="form-group">
   <%= label_tag('pets[sex]', "Gender") %>
-  <%= select_tag('pets[sex]', options_for_select([["None",""],["Male","M"],["Female","F"]])) %>
+  <%= select_tag('pets[sex]', options_for_select([["None",""],["Male","M"],["Female","F"]]), class: "form-control" )%>
+</div>
+<div class="form-group">
     <%= label_tag('pets[size]', "Size") %>
-  <%= select_tag('pets[size]', options_for_select([["None",""],["Small","S"],["Medium","M"], ["Large", "L"], ["Xtra Large", "XL"]])) %>
+  <%= select_tag('pets[size]', options_for_select([["None",""],["Small","S"],["Medium","M"], ["Large", "L"], ["Xtra Large", "XL"]]), class: "form-control") %>
+</div>
 
  <%= submit_tag "Find Pets!" %>
  <%end%>
