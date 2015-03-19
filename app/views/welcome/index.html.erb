@@ -13,7 +13,8 @@
                     <div class="col-sm-6 col-md-8">
                         <h4>
                             <%= pet.name %></h4>
-                        <small><strong>Type: </strong><%= pet.species %> </small>
+                            <hr>
+                        <small><strong>Type: </strong><%= pet.species %> </small><br>
                         <p>
                         <% shelter = Shelter.find(pet.shelter_id)%>
                             <i class="glyphicon glyphicon-envelope"></i><%= shelter.email %>

@@ -1,3 +1,4 @@
+
 .search-btn {
 	margin-top: 21px;
 }
@@ -8,8 +9,8 @@
 
 .navbar-brand,
 .navbar-nav li a {
-    line-height: 100px;
-    height: 100px;
+    line-height: 70px;
+    height: 70px;
     padding-top: 0;
 }
 
@@ -89,4 +90,21 @@ color: #999;
 .other-md-8-col {
   width: 50%;
 }
+.pet-box-shadow {
+  -webkit-box-shadow: 4px 7px 56px -7px rgba(0,0,0,0.59);
+  -moz-box-shadow: 4px 7px 56px -7px rgba(0,0,0,0.59);
+  box-shadow: 4px 7px 56px -7px rgba(0,0,0,0.59);
+}
+.jumbo-color {
+  background-color: #e74c3c;
+}
+.main-container {
+  background-color: #bdc3c7;
+}
+
+
+
+
+
+
 
