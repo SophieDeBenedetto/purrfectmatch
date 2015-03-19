@@ -1,32 +1,125 @@
-
-
-
-
-
-
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
 <div class="container">
-<div class="page-header" id="banner">
-    <div class="row">
-      <div class="col-lg-8 col-md-7 col-sm-6">
-					<h1>A PET</h1>
-					<ul>
-						<li><%= @pet.name %></li>
-						<li><%= @pet.age %></li>
-						<li><%= @pet.sex %></li>
-						<li><%= image_tag @pet.picture %></li>
-						<li><%= @pet.description %></li>
-						<% @pet.breeds.each do |breed| %>
-						<li><%= breed.name %></li>
-						<%end%>
-						<li><%= @pet.size %></li>
-						<li><%= @pet.shelter.name %></li>
-            <li><%= @pet.shelter.phone %></li>
-            <li><a href="mailto:<%= @pet.shelter.email %>"><%= @pet.shelter.email %></a></li>
-            <li><%= @pet.shelter.city %></li>
-            <li><%= @pet.shelter.zip %></li>
-					</ul>
+	<div class="row">
+		<div class="col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6">
+    	 <div class="well profile">
+            <div class="col-sm-12">
+                <div class="col-xs-12 col-sm-8">
+                    <h2><%= @pet.name %></h2>
+                    <p><strong>Type: </strong><%= @pet.species %> </p>
+                    <p><strong>Sex: </strong><%= @pet.sex %></p>
+                    <p><strong>Age: </strong><%= @pet.age %></p>
+                    <p><strong>Size: </strong><%= @pet.size %></p>
+                    <p><strong>Breeds: </strong>
+                    <% @pet.breeds.uniq.each do |breed| %>
+                        <span class="tags"><%= breed.name %></span><br>
+                    <%end%>
+                    </p>
+                    <p><h3>Shelter Info: </h3><br>
+                    <p><strong>Name: </strong><%= @pet.shelter.name %></p>
+                    <p><strong>Email: </strong><%= @pet.shelter.email %></p>
+                    <% if @pet.shelter.phone.nil?  %>
+                    <p><strong>Phone: </strong>N/A</p>
+                    <%else%>
+                    <p><strong>Phone: </strong><%= @pet.shelter.phone %></p>
+                    <%end%>
+                    <p><strong>City: </strong><%= @pet.shelter.city %></p>
+                    <p><strong>Zip: </strong><%= @pet.shelter.zip %></p>
+                </div>
+                <div class="col-xs-12 col-sm-4 text-center">
+                    <figure>
+                       <!--  <img src="http://www.localcrimenews.com/wp-content/uploads/2013/07/default-user-icon-profile.png" alt="" class="img-circle img-responsive"> -->
+                        <%= image_tag @pet.picture, class: "img-circle img-responsive" %>
 
+                    </figure>
+                </div>
+            </div>
+            <div class="col-xs-12 divider text-center scrollable-body">
+               <p><%= @pet.description %></p>
+            </div>
+    	 </div>
+		</div>
+	</div>
+</div>
+<div class="container">
+<div class="well bs-component">
+<div class="row">
+<div class="col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6">
+	<form class="form-horizontal">
+  <fieldset>
+    <legend>Legend</legend>
+    <div class="form-group">
+      <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+      <div class="col-lg-10">
+        <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+      <div class="col-lg-10">
+        <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox"> Checkbox
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="textArea" class="col-lg-2 control-label">Textarea</label>
+      <div class="col-lg-10">
+        <textarea class="form-control" rows="3" id="textArea"></textarea>
+        <span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-lg-2 control-label">Radios</label>
+      <div class="col-lg-10">
+        <div class="radio">
+          <label>
+            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
+            Option one is this
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+            Option two can be something else
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="select" class="col-lg-2 control-label">Selects</label>
+      <div class="col-lg-10">
+        <select class="form-control" id="select">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+        <br>
+        <select multiple="" class="form-control">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-lg-10 col-lg-offset-2">
+        <button type="reset" class="btn btn-default">Cancel</button>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </fieldset>
+</form>
 </div>
 </div>
 </div>
 </div>
+
+
