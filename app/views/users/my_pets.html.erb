@@ -2,8 +2,26 @@
     <div class="row">
       <div class="col-lg-8 col-md-7 col-sm-6">
 <%= @user.email %>
+<h1>My Pets</h1>
 <% @pets.each do |pet| %>
-<table class="table">
+<!-- <div class = "individual-pet">
+    <%= image_tag pet.picture %>
+    <%= pet.name %>
+    <%= pet.species %>
+    <%= pet.sex %>
+    <%= pet.age %>
+
+    <% pet.breeds.uniq.each do |breed| %>
+    <%=  breed.name %>
+                <%end%>
+   
+    <%= pet.size %>
+ 
+    <%= pet.description %>
+
+</div> -->
+<div class="home-blog clearfix">
+<table class="section section-services student-index center">
     <thead>
         <tr>
             <th>Name</th>
@@ -37,7 +55,7 @@
                 <%end%>
             </td>
             <td><%= pet.size %></td>
-            <td><%= image_tag pet.picture %></td>
+            <td><%= image_tag pet.picture, class:"my-pet-pic" %></td>
             <td><%= pet.description %></td>
             <td><%= pet.shelter_id %></td>
             <td><%= pet.shelter.name %></td>
@@ -54,6 +72,7 @@
     </tbody>
 </table>
 <%end%>
+</div>
 </div>
 </div>
 </div>

@@ -12,3 +12,36 @@
     height: 100px;
     padding-top: 0;
 }
+
+.my-pet-pic {
+  width: 304px;
+  height: 320px;
+}
+
+.section-blog {
+  padding-bottom: 30px;
+}
+
+.section {
+  padding: 0 0 0 0;
+  float: left;
+  width: 100%;
+  position: relative;
+}
+
+.home-blog {
+  display: block;
+  margin-left: -2.2%;
+  max-width: 1020px;
+}
+
+.clearfix {
+  height: 1%;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    background-color: #b0e0e6;
+}
