@@ -5,9 +5,13 @@ Rails.application.routes.draw do
 
   root 'welcome#index'
 
+
   get '/pets' => 'pets#index'
 
-  post '/pets/search' => 'pets#search'
+  get '/pets/search' => 'pets#search'
+
+  get '/pets/:id' => 'pets#show', :as => "show_pet"
+
 
   resources :favorite_pets
 

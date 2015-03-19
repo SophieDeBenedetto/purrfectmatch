@@ -1,62 +1,35 @@
-<div class="container">
   <div class="page-header" id="banner">
-    <div class="row">
-      <div class="col-lg-8 col-md-7 col-sm-6">
+    <div class="row row-2">
+      <div class="col-lg-8 col-md-7 col-sm-6 other-col">
 <%= @user.email %>
-<% @pets.each do |pet| %>
-<table class="table">
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Sex</th>
-            <th>Age</th>
-            <th>breed</th>
-            <th>Size</th>
-            <th>Picture</th>
-            <th>Description</th>
-            <th>Shelter_id</th>
+<h1>My Pets</h1>
+<div class="container second-containter">
+    <div class="row row-2">
+    <% @pets.each do |pet| %>
+            <div class="well well-sm other-well">
+                <div class="row row-2">
+                    <div class="col-sm-6 col-md-6">
+                        <%= image_tag pet.picture, size: "380X500" %>
+                    </div>
+                    <div class="col-sm-6 col-md-8 other-md-8-col">
+                        <h4>
+                            <%= pet.name %></h4>
+                        <h5><%= pet.age%></h5>
+                        <h5><%= pet.description%></h5>
 
-            <th>Shelter</th>
-            <th>Phone</th>
-            <th>Email</th>
-            <th>City</th>
-            <th>Zip</th>
-            <th>Like</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><%= pet.name %></td>
-            <td><%= pet.species %></td>
-            <td><%= pet.sex %></td>
-            <td><%= pet.age %></td>
-
-            <td><% pet.breeds.each do |breed| %>
-                <li><%= breed.name %></li>
-                <%end%>
-            </td>
-            <td><%= pet.size %></td>
-            <td><%= image_tag pet.picture %></td>
-            <td><%= pet.description %></td>
-            <td><%= pet.shelter_id %></td>
-            <td><%= pet.shelter.name %></td>
-            <td><%= pet.shelter.phone %></td>
-            <td><%= pet.shelter.email %></td>
-            <td><%= pet.shelter.city %></td>
-            <td><%= pet.shelter.zip %></td>
-            <td><%= form_for pet, :url => { :controller => "favorite_pets", :action => "create" }, :html => {:method => :post}, :remote => true do |f| %>
-            <%= f.hidden_field :id %>
-            <%= f.submit %>
-            <% end %>
-</td>
-        </tr>
-
-
-    </tbody>
-</table>
-<%end%>
-</div>
-</div>
-</div>
+                        <small><%= pet.species %> <i class="glyphicon glyphicon-map-marker">
+                        </i></cite></small>
+                        <p>
+                            <a href="mailto:<%=pet.shelter.email %>"<i class="glyphicon glyphicon-envelope"></a></i><%=pet.shelter.email %>
+                            <br />
+                        </p>
+                        <div class="btn-group">
+                            <a class="btn-group" href="/pets/<%=pet.id%>"><button type="button" class="btn btn-primary">
+                                more</button></a>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+    <%end%>
 </div>

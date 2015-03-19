@@ -1,0 +1,26 @@
+<div class="container">
+<div class="page-header" id="banner">
+    <div class="row">
+      <div class="col-lg-8 col-md-7 col-sm-6">
+					<h1>A PET</h1>
+					<ul>
+						<li><%= @pet.name %></li>
+						<li><%= @pet.age %></li>
+						<li><%= @pet.sex %></li>
+						<li><%= image_tag @pet.picture %></li>
+						<li><%= @pet.description %></li>
+						<% @pet.breeds.each do |breed| %>
+						<li><%= breed.name %></li>
+						<%end%>
+						<li><%= @pet.size %></li>
+						<li><%= @pet.shelter.name %></li>
+            <li><%= @pet.shelter.phone %></li>
+            <li><a href="mailto:<%= @pet.shelter.email %>"><%= @pet.shelter.email %></a></li>
+            <li><%= @pet.shelter.city %></li>
+            <li><%= @pet.shelter.zip %></li>
+					</ul>
+
+</div>
+</div>
+</div>
+</div>

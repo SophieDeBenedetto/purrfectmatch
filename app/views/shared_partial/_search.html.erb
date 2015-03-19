@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="jumbotron">
+  <%= form_tag pets_search_path, :method => 'get', :class => "form-inline search-center" do %>
+  <div class="form-group">
+  	 <%= label_tag('pets[zip_code]', "Zipcode") %><br>
+  	 <%= text_field_tag('pets[zip_code]', nil, class: "form-control") %>
+  </div>
+  <div class="form-group">
+  	 <%= label_tag('pets[species]', "Type") %><br>
+  	 <%= select_tag('pets[species]', options_for_select([["Dog","Dog"],["Cat","Cat"],["Rabbit", "Rabbit"], ["Small & Furry","Small & Furry"],["Horse", "Horse"],["Pig", "Pig"],["Reptile", "Reptile"],["Bird", "Bird"],["Barnyard", "Barnyard"]]), class: "form-control") %>
+  </div>
+  <div class="form-group">
+    <%= label_tag('pets[breed]', "Breed") %><br>
+    <%= text_field_tag('pets[breed]', nil, class: 'typeahead form-control') %>
+  </div>
+  <div class="form-group">
+    <%= label_tag('pets[age]', "Age") %><br>
+    <%= select_tag('pets[age]', options_for_select([["None",""],["Baby","Baby"],["Young","Young"],["Adult", "Adult"], ["Senior","Senior"]]), class: "form-control") %>
+  </div>
+  <div class="form-group">
+    <%= label_tag('pets[sex]', "Gender") %><br>
+    <%= select_tag('pets[sex]', options_for_select([["None",""],["Male","M"],["Female","F"]]), class: "form-control" )%>
+  </div>
+  <div class="form-group">
+      <%= label_tag('pets[size]', "Size") %><br>
+    <%= select_tag('pets[size]', options_for_select([["None",""],["Small","S"],["Medium","M"], ["Large", "L"], ["Xtra Large", "XL"]]), class: "form-control") %>
+  </div>
+  <div class="form-group">
+   <%= submit_tag "Find Pets!", class: "btn btn-warning search-btn" %>
+   <%end%>
+   </div>
+   </div>
+  </div>
