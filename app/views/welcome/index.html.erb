@@ -13,15 +13,16 @@
                     <div class="col-sm-6 col-md-8">
                         <h4>
                             <%= pet.name %></h4>
-                        <small><%= pet.species %> <i class="glyphicon glyphicon-map-marker">
-                        </i></cite></small>
+                        <small><strong>Type: </strong><%= pet.species %> </small>
                         <p>
-                            <i class="glyphicon glyphicon-envelope"></i>email@example.com
+                        <% shelter = Shelter.find(pet.shelter_id)%>
+                            <i class="glyphicon glyphicon-envelope"></i><%= shelter.email %>
                             <br />
+
                         </p>
                         <div class="btn-group">
-                            <button type="button" class="btn btn-primary">
-                                more</button>
+                            <a class="btn-group" href="/pets/<%=pet.id%>"><button type="button" class="btn btn-primary">
+                                more</button></a>
                         </div>
                     </div>
                 </div>
