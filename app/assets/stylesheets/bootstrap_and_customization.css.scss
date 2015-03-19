@@ -13,35 +13,47 @@
     padding-top: 0;
 }
 
-.my-pet-pic {
-  width: 304px;
-  height: 320px;
+
+/*#pet {
+  margin: 0 auto;
 }
 
-.section-blog {
-  padding-bottom: 30px;
+.box {
+  margin: 5px;
+  width: 200px;
+}
+*/
+
+.glyphicon {  margin-bottom: 10px;margin-right: 10px;}
+
+small {
+display: block;
+line-height: 1.428571429;
+color: #999;
 }
 
-.section {
-  padding: 0 0 0 0;
-  float: left;
+.second-container {
+  width: 85%;
+}
+
+.row-2 {
+  margin-right: -15px;
+  margin-left: -15px;
+  margin: auto;
+}
+
+.other-col {
   width: 100%;
-  position: relative;
 }
 
-.home-blog {
-  display: block;
-  margin-left: -2.2%;
-  max-width: 1020px;
+.other-well {
+  padding: 9px;
+  border-radius: 3px;
+  width: 75%;
+  margin: auto;
 }
 
-.clearfix {
-  height: 1%;
+.other-md-8-col {
+  width: 50%;
 }
 
-.center {
-    margin-left: auto;
-    margin-right: auto;
-    width: 70%;
-    background-color: #b0e0e6;
-}
