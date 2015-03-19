@@ -16,4 +16,5 @@
 //= require twitter/typeahead
 //= require turbolinks
 //= require bootstrap.min
+//= require masonry/jquery.masonry
 //= require_tree .
