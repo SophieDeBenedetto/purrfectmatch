@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
   has_many :shelters, through: :pets
   has_many :favorite_pets
   has_many :pets, through: :favorite_pets
+  validates_presence_of :name
   #has_many :favoritepets
 
 end
