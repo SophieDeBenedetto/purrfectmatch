@@ -17,6 +17,8 @@ Rails.application.routes.draw do
 
   get '/my_pets' => 'users#my_pets'
 
+  post '/mailers/create' => 'mailers#create'
+
 
 
 

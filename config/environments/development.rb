@@ -41,4 +41,20 @@ Rails.application.configure do
 
   # Set up URL Devise mailer configuration.
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings =  {
+    :address        => "smtp.gmail.com",
+    :port       =>  587,
+    :domain       =>  'localhost',
+    :user_name      => 'purrfectmatch.adopt@gmail.com',
+    :password     =>  'flatironschool007',
+    :authentication   => 'plain',
+    :enable_starttls_auto   => true
+}
+
+
+# SMTP settings for gmail
+
 end

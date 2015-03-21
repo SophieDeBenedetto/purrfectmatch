@@ -35,6 +35,21 @@
                     <a class="btncustom btn-warning btn-sm" href="/pets/<%=pet.id%>">+
                     </a>
                 </div>
+                <%if user_signed_in?%>
+                <div class="bottom">
+
+                    <button class="btncustom btn-warning btn-sm">like
+                    </button>
+                </div>
+                <%else%>
+                <div class="bottom">
+
+                    <button class="btncustom btn-warning btn-sm" id="like-btn">like
+                    </button>
+                </div>
+
+                <%end%>
+
             </div>
 
         </div>
