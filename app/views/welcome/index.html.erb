@@ -9,38 +9,42 @@
 <%end%>
 <%= render "shared_partial/search" %>
 
+<div class="showcase">
 <div class="container">
     <div class="row">
     <% @pets.each do |pet| %>
-        <div class="col-xs-12 col-sm-6 col-md-7 col-md-offset-2">
-            <div class="well well-sm">
-                <div class="row">
-                    <div class="col-sm-6 col-md-6">
+        <div class="col-lg-3 col-sm-6">
 
-                        <%= image_tag(pet.picture, class: "img-size") %>
-                    </div>
-                    <div class="col-sm-6 col-md-8">
-                        <h4>
-                            <%= pet.name %></h4>
-                            <hr>
-                        <small><strong>Type: </strong><%= pet.species %> </small><br>
-                        <p>
-                        <% shelter = Shelter.find(pet.shelter_id)%>
-                            <i class="glyphicon glyphicon-envelope"></i><%= shelter.email %>
-                            <br />
+            <div class="card hovercard">
+                <div class="cardheader">
 
-                        </p>
-                        <div class="btn-group">
-                            <a class="btn-group" href="/pets/<%=pet.id%>"><button type="button" class="btn btn-primary">
-                                more</button></a>
-                        </div>
-                    </div>
+                </div>
+                <div class="avatar">
+                <%= image_tag pet.picture %>
+
+                </div>
+                <div class="info">
+                    <h5>
+                        <%= pet.name %>
+                    </h5>
+                    <div class="desc"><%= pet.species %></div>
+                    <div class="desc"><%= pet.shelter.city %>    <span class="glyphicon glyphicon-globe" aria-hidden="true"></span></div>
+                </div>
+                <div class="bottom">
+
+                    <a class="btncustom btn-warning btn-sm" href="/pets/<%=pet.id%>">+
+                    </a>
                 </div>
             </div>
+
         </div>
     <%end%>
     </div>
 </div>
+
+</div>
+
+
 
 
 

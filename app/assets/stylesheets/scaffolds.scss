@@ -1,5 +1,14 @@
 body {
-  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTo900g2OnzEsy0rF8PQ-pJDNzMeLS5L1z9voAR1p2YiyxHI5TL');
+   background: url(https://scontent-lga.xx.fbcdn.net/hphotos-xft1/v/t1.0-9/11076261_10155231883570276_2669695048877143675_n.jpg?oh=d082344779badcc1de35f667be705586&oe=55815985) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+ /* -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);*/
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
