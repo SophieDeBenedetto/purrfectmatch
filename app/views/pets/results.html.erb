@@ -10,8 +10,8 @@
 <div class="container">
     <div class="row">
         <ul class="thumbnails">
-        <% @pets.each do |pet| %>
             <div class="col-md-4">
+        <% @pets.each do |pet| %>
                 <div class="thumbnail" id="pet-result-pic">
                      <%= image_tag(pet.picture, class: "img-responsive resize-result pet-picture")  %>
                     <div class="caption">
@@ -32,9 +32,9 @@
                         </div>
                     </div>
                 </div>
+        <%end%>
             </div>
 
-        <%end%>
         </ul>
     </div>
 </div>
