@@ -1,4 +1,5 @@
 $(function(){
+	favPetListener();
 	hideForm();
 	contactShelter();
 	showForm();
@@ -6,6 +7,11 @@ $(function(){
 });
 
 
+	function favPetListener() {
+ $("#like-btn").on("click", function(){
+   alert("Sign in to like a pet!");
+ });
+}
 
 function hideForm() {
 	$('.showform').hide();

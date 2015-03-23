@@ -206,7 +206,7 @@
     padding-top: 0;
     overflow: hidden;
     text-align: center;
-    background-color: rgba(214, 224, 226, 0.2);
+    background-color: #eee;
      -webkit-box-shadow: 4px 7px 56px -7px rgba(0,0,0,0.59);
   -moz-box-shadow: 4px 7px 56px -7px rgba(0,0,0,0.59);
   box-shadow: 4px 7px 56px -7px rgba(0,0,0,0.59);
@@ -263,7 +263,7 @@
 .btncustom { border-radius: 50%; width:36px; height:36px; line-height:20px;  }
 
 .showcase {
-  background-color: rgba(236, 240, 241,1.0);
+  /*background-color: rgba(236, 240, 241,1.0);*/
 
 }
 
@@ -350,7 +350,7 @@ color: #999;
   box-shadow: 4px 7px 56px -7px rgba(0,0,0,0.59);
 }
 .jumbo-color {
-  background-color: rgba(197, 239, 247,0.90);
+  /*background-color: rgba(46, 204, 113, 0.95);*/
 }
 /*.main-container {
   background-color: #bdc3c7;
@@ -454,8 +454,50 @@ span.tags
     overflow: scroll;
 }
 
-div.jumbotron.pet-box-shadow.jumbo-color h1 {
+div.jumbotron.pet-box-shadow.jumbo-color h2 {
   text-align: center;
 }
+
+.resize-result {
+  width: 200px;
+  height: 200px;
+  max-width: 150px;
+  max-height: 150px;
+}
+.img-sizing {
+    border-radius: 10px;
+    max-width: 130%;
+}
+
+#pet-result-pic {
+    margin-top: 20px;
+  border-radius: 10px;
+  background-color: #f5f5f5;
+}
+.pet-picture {
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.result-name {
+    text-align: center;
+}
+.well #form-link {
+    text-align: center;
+}
+.more-buttom {
+    margin-left: 0px;
+}
+.more-warning {
+    margin-top: 5px;
+}
+
+
+/*.clearbox {
+    clear: both;
+}*/
+
+
+
 
 

@@ -7,36 +7,38 @@
     </div>
 </div>
 
-
 <div class="container">
     <div class="row">
-    <% @pets.each do |pet| %>
-        <div class="col-xs-12 col-sm-6 col-md-7 col-md-offset-2">
-            <div class="well well-sm">
-                <div class="row">
-                    <div class="col-sm-6 col-md-6">
-
-                        <%= image_tag(pet.picture, class: "img-size") %>
-                    </div>
-                    <div class="col-sm-6 col-md-8">
-                        <h4>
-                            <%= pet.name %></h4>
-                            <hr>
-                        <small><strong>Type: </strong><%= pet.species %> </small><br>
-                        <p>
-                        <% shelter = Shelter.find(pet.shelter_id)%>
-                            <i class="glyphicon glyphicon-envelope"></i><%= shelter.email %>
-                            <br />
-
-                        </p>
-                        <div class="btn-group">
-                            <a class="btn-group" href="/pets/<%=pet.id%>"><button type="button" class="btn btn-primary">
-                                more</button></a>
+        <ul class="thumbnails">
+        <% @pets.each do |pet| %>
+            <div class="col-md-4">
+                <div class="thumbnail" id="pet-result-pic">
+                     <%= image_tag(pet.picture, class: "img-responsive resize-result pet-picture")  %>
+                    <div class="caption">
+                         <h3 class="result-name"><%= pet.name %></h3>
+                        <small class="result-name">Type: <strong><%= pet.species %></strong></small>
+                        <!--set up some logic- if you're not signed in, clicking this button raises sign in alert. -->
+                        <div class="row">
+                          <div class="col-md-6 like-button">
+                              <%= form_for pet, :url => { :controller => "favorite_pets", :action => "create" }, :html => {:method => :post}, :remote => true do |f| %>
+                               <%= f.hidden_field :id %>
+                               <%= f.submit "Like", class: "btn btn-warning like-button" %>
+                               <% end %>
+                          </div>
+                          <div class="col-md-6">
+                            <p align="center"><a href="/pets/<%=pet.id%>" class="btn btn-warning more-button">more</a>
+                            </p>
+                          </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    <%end%>
+
+        <%end%>
+        </ul>
     </div>
 </div>
+
+
+
+

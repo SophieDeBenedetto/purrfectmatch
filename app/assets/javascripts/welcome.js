@@ -7,7 +7,7 @@ $(document).ready(function(){
 
 
 function favPetListener() {
- $("button #like-btn").on("click", function(){
+ $("#like-btn").on("click", function(){
    alert("Sign in to like a pet!");
  });
 }
