@@ -12,7 +12,14 @@ class PetsController < ApplicationController
 
   def search
     # binding.pry
-    @pets = Pet.where(clean_params)
+    animals = Pet.where(clean_params)
+    # binding.pry
+    if params["pets"]["breeds"]
+      @pets = animals.select {|animal| animal.breeds.include?(params["pets"]["breed"])}
+    else
+      @pets = animals
+    end
+
     render :results
   end
 
@@ -23,7 +30,7 @@ class PetsController < ApplicationController
   end
 
   def clean_params
-    thinned_params.permit(:species, :zip_code, :sex, :size, :breed, :age)
+    thinned_params.permit(:species, :zip_code, :sex, :size, :age)
   end
 
 end

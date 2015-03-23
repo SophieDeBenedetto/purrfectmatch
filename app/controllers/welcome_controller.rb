@@ -2,7 +2,7 @@ class WelcomeController < ApplicationController
 	# for test purposes callback to user auth at the root welcome#index
 	# before_action :authenticate_user!
 	def index
-		@pets = random_select(Pet.all, 50)
+		@pets = random_select(Pet.all, 4)
 
 	end
 

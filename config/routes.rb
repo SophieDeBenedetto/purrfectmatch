@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
   resources :users
-  # resources :pets
 
   root 'welcome#index'
 
@@ -16,6 +15,8 @@ Rails.application.routes.draw do
   resources :favorite_pets
 
   get '/my_pets' => 'users#my_pets'
+
+  post '/mailers/create' => 'mailers#create'
 
 
 

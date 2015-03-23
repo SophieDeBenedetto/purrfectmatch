@@ -1,9 +1,19 @@
 body {
-  background-color: #fff;
+   background: url(http://www.olympusserviceswa.com/wp-content/uploads/2014/05/white-paper-background-cardboard-texture-hd.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+ /* -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);*/
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
+  /*background-image: url('http://img.wikinut.com/img/3r2wx5cgt8jj06eq/jpeg/0/Nature.jpeg');*/
 }
 
 p, ol, ul, td {
