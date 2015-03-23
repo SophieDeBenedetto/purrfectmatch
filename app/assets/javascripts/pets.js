@@ -1,7 +1,9 @@
 $(function(){
+	debugger;
 	favPetListener();
 	hideForm();
 	contactShelter();
+	likePet();
 	showForm();
 	hideCancel();
 });
@@ -32,4 +34,10 @@ function hideCancel() {
 	$('.cancel-btn').click(function(){
 		$('.showform').hide();
 	})
+}
+
+function likePet(){
+	$("#like-btn-notice").click(function(){
+		alert("Sign in to like and save this pet!");
+	});
 }
