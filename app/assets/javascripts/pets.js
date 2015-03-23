@@ -5,6 +5,8 @@ $(function(){
 	contactShelter();
 	hideModal();
 	likePet();
+	savePet();
+	hideModalLike();
 	showForm();
 	hideCancel();
 });
@@ -41,9 +43,31 @@ function contactShelter() {
 	// 	$('#myModal').show();
 	// });
 }
+
+function savePet() {
+	// // $('.contact-shelter').click(function(){
+	// 	// alert("Sign in to contact this shelter!");
+	$('#likeModal').on('shown.bs.modal', function () {
+		// debugger;
+	$('#likeModal').show();
+
+	// $('#myInput').focus()
+	});
+
+	// $('.contact-shelter').click(function(){
+	// 	debugger;
+	// 	$('#myModal').show();
+	// });
+}
 function hideModal() {
 	$('.close').click(function(){
 		$('#myModal').hide();
+	});
+}
+
+function hideModalLike() {
+	$('.close').click(function(){
+		$('#likeModal').hide();
 	});
 }
 function hideCancel() {
