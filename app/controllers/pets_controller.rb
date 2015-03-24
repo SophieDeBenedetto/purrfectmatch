@@ -11,17 +11,24 @@ class PetsController < ApplicationController
 
 
   def search
-    # binding.pry
-    animals = Pet.where(clean_params)
-    # binding.pry
-    if params["pets"]["breeds"]
-      @pets = animals.select {|animal| animal.breeds.include?(params["pets"]["breed"])}
-    else
-      @pets = animals
-    end
+   animals = Pet.where(clean_params)
+   @pets = []
+   if params["pets"]["breed"]
+     animals.each do |animal|
+       animal.breeds.each do |breed|
+         if breed.name == params["pets"]["breed"]
+           @pets << animal
+         end
+       end
+     end
+   else
+     @pets = animals
+   end
 
-    render :results
-  end
+   render :results
+ end
+
+
 
   private
 
