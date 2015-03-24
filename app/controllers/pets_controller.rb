@@ -19,7 +19,7 @@ class PetsController < ApplicationController
          if breed.name == params["pets"]["breed"]
            @pets << animal
            @pets.uniq
-           # binding.pry
+           binding.pry
          end
        end
      end
