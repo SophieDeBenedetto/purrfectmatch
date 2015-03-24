@@ -15,7 +15,11 @@
                 <div class="thumbnail" id="pet-result-pic">
                      <%= image_tag(pet.picture, class: "img-responsive resize-result pet-picture")  %>
                     <div class="caption">
-                         <h3 class="result-name"><%= pet.name %></h3>
+                         <%if pet.name.length > 10 %>
+                         <h4 class="result-name"><%= pet.name.slice(0,10) + "..." %></h4>
+                         <%else%>
+                         <h4 class="result-name"><%= pet.name%></h4>
+                         <%end%>
                         <small class="result-name">Type: <strong><%= pet.species %></strong></small>
                         <!--set up some logic- if you're not signed in, clicking this button raises sign in alert. -->
                         <div class="row">
