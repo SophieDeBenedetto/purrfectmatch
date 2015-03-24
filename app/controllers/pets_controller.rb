@@ -18,6 +18,8 @@ class PetsController < ApplicationController
        animal.breeds.each do |breed|
          if breed.name == params["pets"]["breed"]
            @pets << animal
+           @pets.uniq
+           # binding.pry
          end
        end
      end
