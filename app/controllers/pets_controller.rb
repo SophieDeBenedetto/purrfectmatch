@@ -28,8 +28,6 @@ class PetsController < ApplicationController
    render :results
  end
 
-
-
   private
 
   def thinned_params
