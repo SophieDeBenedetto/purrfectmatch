@@ -11,22 +11,24 @@ class PetsController < ApplicationController
 
 
   def search
-    animals = Pet.where(clean_params)
-    @pets = []
-    if params["pets"]["breed"]
-      animals.each do |animal| 
-        animal.breeds.each do |breed|
-          if breed.name == params["pets"]["breed"]
-            @pets << animal
-          end
-        end
-      end
-    else
-      @pets = animals
-    end
+   animals = Pet.where(clean_params)
+   @pets = []
+   if params["pets"]["breed"]
+     animals.each do |animal|
+       animal.breeds.each do |breed|
+         if breed.name == params["pets"]["breed"]
+           @pets << animal
+           @pets.uniq
+           binding.pry
+         end
+       end
+     end
+   else
+     @pets = animals
+   end
 
-    render :results
-  end
+   render :results
+ end
 
   private
 
