@@ -1,11 +1,12 @@
-== README
+{<img src="https://codeclimate.com/github/SophieDeBenedetto/purrfectmatch/badges/gpa.svg" />}[https://codeclimate.com/github/SophieDeBenedetto/purrfectmatch]
 
-TODO:
+Purrfect Match is a rails app that connects users to thousands of adoptable pets in their area. 
 
--Make sure program doesn't break if certain values are nil (e.g `photos.medium`)
+It utilizes the Petfinder api to populate a postgresql database with thousands of pets and shelters in the New York City area. 
 
--Implement autocomplete feature for Breeds field (https://github.com/twitter/typeahead.js)
+Action Mailer connects users directly to shelters when they are ready to adopt a pet. 
 
--Set callback methods for user authentification (e.g before adding pet to FavoritePet)
+
+
 
 
