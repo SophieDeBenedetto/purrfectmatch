@@ -6,6 +6,9 @@ It utilizes the Petfinder api to populate a postgresql database with thousands o
 
 Action Mailer connects users directly to shelters when they are ready to adopt a pet. 
 
+Contributors:
+
+(Cyrus Ghazanfar)[https://github.com/cyzanfar]
 
 
 
