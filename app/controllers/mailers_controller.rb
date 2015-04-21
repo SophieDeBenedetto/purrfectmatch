@@ -1,7 +1,6 @@
 class MailersController < ApplicationController
 
 	def create
-		binding.pry
 	 	@user_email = params[:email][:user_email]
 	  @shelter_email = params[:email][:shelter_email]
 	  @content = params[:email][:content]

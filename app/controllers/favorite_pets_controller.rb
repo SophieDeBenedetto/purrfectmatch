@@ -9,7 +9,6 @@ class FavoritePetsController < ApplicationController
 	end
 
 	def create
-		# binding.pry
 		@favorite_pet = FavoritePet.find_or_create_by(pet_id: params["pet"]["id"].to_i, user_id: current_user.id)
 		# redirect_to user_path
 	end
